@@ -22,30 +22,30 @@ lottery_quantity_str = "5"
 
 def main():
     global candy_quantity_str, soda_quantity_str, gallons_str, pounds_str, lottery_quantity_str
-    candy_quantity_str = input("How many candy bars? ")
-    soda_quantity_str = input("How many sodas? ")
-    gallons_str = input("How many gallons of gas? ")
-    pounds_str = input("How many pounds of deli meat? ")
-    lottery_quantity_str = input("How many lottery tickets? )
+    candy_quantity_str = int(input("How many candy bars? "))
+    soda_quantity_str = int(input("How many sodas? "))
+    gallons_str = float(input("How many gallons of gas? "))
+    pounds_str = int(input("How many pounds of deli meat? "))
+    lottery_quantity_str = int(input("How many lottery tickets? "))
 
 
 # Comment out the line below after fixing input bugs
-main()
+#main()
 
 
 # --- Receipt Header ---
-print(""
+print("""
 ========================================
        GAS STATION RECEIPT
       Thank you for shopping!
 ========================================
-"")
+""")
 
 # --- Candy Bars ---
 # Price: $1.89 each (float price, int quantity)
 candy_price = 1.89
 candy_quantity = candy_quantity_str
-candy_total = candy_price * candy_quantity
+candy_total = candy_price * int(input("candy_quantity"))
 print(f"Candy Bars: {candy_quantity} x ${candy_price} = ${candy_total}")
 
 # --- Soda Bottles ---
